@@ -1,10 +1,21 @@
 // Exercise 1: Calculate the Sum of Two Numbers
-
-(Your pseudocode here)
+num1 = 8
+num2 = 4
+sum = (num1+num2)
 
 // Exercise 2: Check if a Number is Even or Odd
 
-(Your pseudocode here)
+num = 0
+rmndr = num % 2
+
+if rmndr == 0 
+    print "The number is even"
+
+else
+    print "the number is odd"
+
+end if
+
 
 // Exercise 3: 
 Write pseudo code that will perform the following.    
@@ -14,6 +25,85 @@ b) Calculate the average of the five numbers.
 c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
 d) Write out the results found from steps b and c with a message describing what they are
 
-(Your pseudocode here)
+// Declare variables to store the numbers, the average, the minimum and the maximum
+num1 = 0
+num2 = 0
+num3 = 0
+num4 = 0
+num5 = 0
+average = 0
+minimum = 0
+maximum = 0
+
+
+print "Enter the first number:"
+input num1
+
+
+print "Enter the second number:"
+input num2
+
+
+print "Enter the third number:"
+input num3
+
+
+print "Enter the fourth number:"
+input num4
+
+
+print "Enter the fifth number:"
+input num5
+
+// Calculate the average 
+average = (num1 + num2 + num3 + num4 + num5) / 5
+
+// Initialize 
+minimum = num1
+maximum = num1
+
+// Compare each number with the minimum and maximum
+
+if num2 < minimum then
+    minimum = num2
+end if
+
+if num2 > maximum then
+    maximum = num2
+end if
+
+if num3 < minimum then
+    minimum = num3
+end if
+
+if num3 > maximum then
+    maximum = num3
+end if
+
+if num4 < minimum then
+    minimum = num4
+end if
+
+if num4 > maximum then
+    maximum = num4
+end if
+
+if num5 < minimum then
+    minimum = num5
+end if
+
+if num5 > maximum then
+    maximum = num5
+end if
+
+// Display the results 
+print "The average of the five numbers is:"
+print average
+
+print "The minimum of the five numbers is:"
+print minimum
+
+print "The maximum of the five numbers is:"
+print maximum
 
 -- END --
