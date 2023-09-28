@@ -1,7 +1,7 @@
 // Exercise 1: Calculate the Sum of Two Numbers
 num1 = 8
 num2 = 4
-sum = (num1+num2)
+sum = (num1 + num2)
 
 // Exercise 2: Check if a Number is Even or Odd
 
@@ -25,85 +25,67 @@ b) Calculate the average of the five numbers.
 c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
 d) Write out the results found from steps b and c with a message describing what they are
 
-// Declare variables to store the numbers, the average, the minimum and the maximum
-num1 = 0
-num2 = 0
-num3 = 0
-num4 = 0
-num5 = 0
-average = 0
-minimum = 0
-maximum = 0
+// Declare an array to hold the inputed five numbers
 
+numbers = []
 
-print "Enter the first number:"
-input num1
+// Loop five times to receive the input of five numbers
 
+for i = 0 to 4
 
-print "Enter the second number:"
-input num2
+    // Input request - number
+        
+        print "Enter a number:"
 
+    // Read the input and convert it to a numeric value
+    
+        num = input()
+        num = to_number(num)
 
-print "Enter the third number:"
-input num3
+    // Add the inputed number to the array
+    
+        numbers.append(num)
 
+end loop
 
-print "Enter the fourth number:"
-input num4
+// Declare variables to store the sum, average, minimum and maximum of the numbers
 
+sum = 0
+avg = 0
 
-print "Enter the fifth number:"
-input num5
+min = numbers[0] 
+max = numbers[0] 
 
-// Calculate the average 
-average = (num1 + num2 + num3 + num4 + num5) / 5
+// Loop thru array to calculate the sum and find the minimum and maximum
 
-// Initialize 
-minimum = num1
-maximum = num1
+for each num in numbers
 
-// Compare each number with the minimum and maximum
+    // Add the num to the sum
+    sum = sum + num
 
-if num2 < minimum then
-    minimum = num2
-end if
+    // Compare the num with the minimum 
 
-if num2 > maximum then
-    maximum = num2
-end if
+    if num < min then
+        min = num
+    end if
 
-if num3 < minimum then
-    minimum = num3
-end if
+    // Compare the num with the maximum 
 
-if num3 > maximum then
-    maximum = num3
-end if
+    if num > max then
+        max = num
+    end if
 
-if num4 < minimum then
-    minimum = num4
-end if
+end loop
 
-if num4 > maximum then
-    maximum = num4
-end if
+// Calculate the average by dividing the sum by the length of the array
 
-if num5 < minimum then
-    minimum = num5
-end if
+average = sum / numbers.length
 
-if num5 > maximum then
-    maximum = num5
-end if
+// Write out the results with a message describing what they are
 
-// Display the results 
-print "The average of the five numbers is:"
-print average
+print "The average of the five numbers is " + avg
+print "The smallest of the five numbers is " + min
+print "The largest of the five numbers is " + max
 
-print "The minimum of the five numbers is:"
-print minimum
-
-print "The maximum of the five numbers is:"
-print maximum
 
 -- END --
